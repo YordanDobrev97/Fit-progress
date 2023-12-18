@@ -16,7 +16,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <header className="header-section">
+          <div className="row">
+            <div className="bg-black bg-opacity-75 p-8 fixed w-full top-0 z-10">
+              <ul className="container mx-auto flex justify-end">
+                    <li className="mr-5 text-xl"><a className="text-white" href="./index.html">Начало</a></li>
+                    <li className="mr-5 text-xl"><a className="text-white" href="./about-us.html">За проекта</a></li>
+                    <li className="mr-5 text-xl"><a className="text-white" href="./blog.html">Вход</a></li>
+                    <li className="mr-5 text-xl"><a className="text-white" href="./contact.html">Регистрация</a></li>
+                  </ul>
+            </div>
+          </div>
+        </header>
+        
+        {children}
+      </body>
     </html>
   )
 }
